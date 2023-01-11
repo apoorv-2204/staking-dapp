@@ -3,19 +3,20 @@ require('dotenv').config()
 require("@nomiclabs/hardhat-etherscan");
 
 module.exports = {
-
-  solidity: "0.8.6",
-  settings:{
-    optimizer:{
-      enables:true,
-      runs:200
+  solidity: {
+    version: "0.8.6",
+    settings: {
+      optimizer: {
+        enabled: true,
+        runs: 1000,
+      }
     }
   },
-  networks:{
-    hardhat:{
-      chainId:1337
+  networks: {
+    hardhat: {
+      chainId: 1337
     },
-    goerli:{
+    goerli: {
       url: `https://goerli.infura.io/v3/${process.env.INFURA_API_KEY}`,
       chainId: 5,
     },
@@ -25,12 +26,14 @@ module.exports = {
     //   },
     // },
   },
-  gasReporter:{
-    enabled:true,
-    currency:"INR",
-    coinmarketcap:process.env.COINMARKETCAP,
-    token:"matic",
-    outputFile:"gasReports.txt",
-    noColors:true
+  gasReporter: {
+    enabled: true,
+    currency: "INR",
+    coinmarketcap: "eb06a943-2bc6-43b7-8e53-5ebd04c84048",
+    token: "avax",
+    outputFile: 'gas-report.txt',
+    noColors: true,
+    showTimeSpent: true,
   }
-  }
+
+}

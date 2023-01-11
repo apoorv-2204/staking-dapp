@@ -1,4 +1,4 @@
-const{ethers} =require("hardhat");
+const { ethers } = require("hardhat");
 
 async function main() {
   const RewardToken = await ethers.getContractFactory("RewardToken");
@@ -7,7 +7,7 @@ async function main() {
 
   console.log("RewardToken contract deployed to:", rewardToken.address);
 
-  const Staking = await ethers.getContractFactory("staking");
+  const Staking = await ethers.getContractFactory("Staking");
   const staking = await Staking.deploy(rewardToken.address, rewardToken.address);
   await staking.deployed();
 

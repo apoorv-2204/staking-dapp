@@ -1,16 +1,16 @@
 {
   "_format": "hh-sol-cache-2",
   "files": {
-    "E:\\stakinmg-minimal\\contracts\\Openzeppelin\\Context.sol": {
-      "lastModificationDate": 1673336158652,
-      "contentHash": "7093b039d79750162610c51cd75dfce8",
+    "/home/uniris/Documents/apoorv/projects/staking-demo/contracts/Openzeppelin/Context.sol": {
+      "lastModificationDate": 1673450872326,
+      "contentHash": "c4b296fb9a98a645ca52cc72c3fbae06",
       "sourceName": "contracts/Openzeppelin/Context.sol",
       "solcConfig": {
         "version": "0.8.6",
         "settings": {
           "optimizer": {
-            "enabled": false,
-            "runs": 200
+            "enabled": true,
+            "runs": 1000
           },
           "outputSelection": {
             "*": {
@@ -36,16 +36,16 @@
         "Context"
       ]
     },
-    "E:\\stakinmg-minimal\\contracts\\Openzeppelin\\ERC20.sol": {
-      "lastModificationDate": 1673336172841,
-      "contentHash": "3bb08d2eb38e64281a5b77f74e052f28",
+    "/home/uniris/Documents/apoorv/projects/staking-demo/contracts/Openzeppelin/ERC20.sol": {
+      "lastModificationDate": 1673450872326,
+      "contentHash": "5c739d0ba4220483464b1e11811e7d27",
       "sourceName": "contracts/Openzeppelin/ERC20.sol",
       "solcConfig": {
         "version": "0.8.6",
         "settings": {
           "optimizer": {
-            "enabled": false,
-            "runs": 200
+            "enabled": true,
+            "runs": 1000
           },
           "outputSelection": {
             "*": {
@@ -75,16 +75,16 @@
         "ERC20"
       ]
     },
-    "E:\\stakinmg-minimal\\contracts\\Openzeppelin\\IERC20.sol": {
-      "lastModificationDate": 1673335942267,
-      "contentHash": "57745aa42fa0a7872eba2499c32651b7",
+    "/home/uniris/Documents/apoorv/projects/staking-demo/contracts/Openzeppelin/IERC20.sol": {
+      "lastModificationDate": 1673450872326,
+      "contentHash": "244f46be41856150d2333b5d3bb2ad80",
       "sourceName": "contracts/Openzeppelin/IERC20.sol",
       "solcConfig": {
         "version": "0.8.6",
         "settings": {
           "optimizer": {
-            "enabled": false,
-            "runs": 200
+            "enabled": true,
+            "runs": 1000
           },
           "outputSelection": {
             "*": {
@@ -110,16 +110,16 @@
         "IERC20"
       ]
     },
-    "E:\\stakinmg-minimal\\contracts\\Openzeppelin\\IERC20Metadata.sol": {
-      "lastModificationDate": 1673336127689,
-      "contentHash": "e13da596fbf5c36b723a001996699cd2",
+    "/home/uniris/Documents/apoorv/projects/staking-demo/contracts/Openzeppelin/IERC20Metadata.sol": {
+      "lastModificationDate": 1673450872326,
+      "contentHash": "24f186419f9a910c0982e0ea0d379f90",
       "sourceName": "contracts/Openzeppelin/IERC20Metadata.sol",
       "solcConfig": {
         "version": "0.8.6",
         "settings": {
           "optimizer": {
-            "enabled": false,
-            "runs": 200
+            "enabled": true,
+            "runs": 1000
           },
           "outputSelection": {
             "*": {
@@ -147,16 +147,16 @@
         "IERC20Metadata"
       ]
     },
-    "E:\\stakinmg-minimal\\contracts\\RewardToken.sol": {
-      "lastModificationDate": 1673336194779,
-      "contentHash": "761fa86613bd111b7ec94ae2e45767e3",
+    "/home/uniris/Documents/apoorv/projects/staking-demo/contracts/RewardToken.sol": {
+      "lastModificationDate": 1673450872326,
+      "contentHash": "a190f3736819feff757f5e542a70a87f",
       "sourceName": "contracts/RewardToken.sol",
       "solcConfig": {
         "version": "0.8.6",
         "settings": {
           "optimizer": {
-            "enabled": false,
-            "runs": 200
+            "enabled": true,
+            "runs": 1000
           },
           "outputSelection": {
             "*": {
@@ -184,16 +184,16 @@
         "RewardToken"
       ]
     },
-    "E:\\stakinmg-minimal\\contracts\\Staking.sol": {
-      "lastModificationDate": 1673336014688,
-      "contentHash": "9b4b62097b97668923d99d25c36c4061",
+    "/home/uniris/Documents/apoorv/projects/staking-demo/contracts/Staking.sol": {
+      "lastModificationDate": 1673454529619,
+      "contentHash": "e245178d384fd33be2394697bf49f3ac",
       "sourceName": "contracts/Staking.sol",
       "solcConfig": {
         "version": "0.8.6",
         "settings": {
           "optimizer": {
-            "enabled": false,
-            "runs": 200
+            "enabled": true,
+            "runs": 1000
           },
           "outputSelection": {
             "*": {
@@ -219,19 +219,19 @@
         "^0.8.6"
       ],
       "artifacts": [
-        "staking"
+        "Staking"
       ]
     },
-    "E:\\stakinmg-minimal\\contracts\\Openzeppelin\\ReentrancyGuard.sol": {
-      "lastModificationDate": 1673335974519,
-      "contentHash": "a5d0f59059ee32092a8d43dc09c1ee0a",
+    "/home/uniris/Documents/apoorv/projects/staking-demo/contracts/Openzeppelin/ReentrancyGuard.sol": {
+      "lastModificationDate": 1673450872326,
+      "contentHash": "f0588ec923d6b3cf8a50dfde2a39bfc7",
       "sourceName": "contracts/Openzeppelin/ReentrancyGuard.sol",
       "solcConfig": {
         "version": "0.8.6",
         "settings": {
           "optimizer": {
-            "enabled": false,
-            "runs": 200
+            "enabled": true,
+            "runs": 1000
           },
           "outputSelection": {
             "*": {
