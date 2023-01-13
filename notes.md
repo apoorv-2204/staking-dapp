@@ -11,3 +11,20 @@
 11) bcz the balance remain same is due to staking token being same, we can have d/f token also , instead of rt we can have srt
 12) time dependent unit tests
 13) https://trufflesuite.com/blog/introducing-ganache-7/#6-fast-forward-time
+
+
+###
+1) Infrastructure as a Service,Blockchain Nodes as a service,provid an api to connect to this blockchain 
+2) alchemy and infura
+
+#### 
+Infura 
+=> web appllication => https
+=> iot websocket 
+https://polygon-mumbai.infura.io/v3/
+https://app.infura.io/dashboard/ethereum/
+
+https://faucet.polygon.technology/
+why we are not use infura api in wallet
+https://mumbai.polygonscan.com/
+https://matic-mumbai.chainstacklabs.com

@@ -1,8 +1,10 @@
+
 require("@nomicfoundation/hardhat-toolbox");
+
 require('dotenv').config()
 require("@nomiclabs/hardhat-etherscan");
-
 module.exports = {
+  defaultNetwork: "hardhat",
   solidity: {
     version: "0.8.6",
     settings: {
@@ -21,8 +23,10 @@ module.exports = {
       chainId: 5,
     },
     mumbai: {
-      url: `https://polygon-mumbai.infura.io/v3/${process.env.INFURA_API}`,
-      accounts: [process.env.MAIN_ACCOUNT],
+      // https://docs.unstoppabledomains.com/manage-domains/guides/add-polygon-to-metamask/
+
+      url: `https://polygon-mumbai.infura.io/v3/${process.env.INFURA_API_KEY}`,
+      accounts: [process.env.WALLET_PRIVATE_KEY],
       chainId: 80001,
     },
     // etherscan: {
@@ -30,17 +34,15 @@ module.exports = {
     //     goerli: process.env.ETHERSCAN_API_KEY,
     //   },
     // },
-
-
   },
   gasReporter: {
     enabled: true,
     currency: "INR",
-    coinmarketcap: "eb06a943-2bc6-43b7-8e53-5ebd04c84048",
+    coinmarketcap: process.env.COINMARKETCAP_API_KEY,
     token: "avax",
     outputFile: 'gas-report.txt',
     noColors: true,
     showTimeSpent: true,
-  }
+  },
 
 }
