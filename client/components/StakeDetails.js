@@ -9,8 +9,9 @@ function StakeDetails() {
   const [stakedBalance, setStakedBalance] = useState('0');
   const [earnedBalance, setEarnedBalance] = useState('0');
 
-  const stakingAddress = "0x6c096882F49f46ab685885d04c7Cc18dE27051f1";
-  const rewardTokenAddress = "0xeA82949B74bf295777FF9e0BC368F7023cF5F3c5";
+
+  const stakingAddress = "0xd00128a1D02b304BFFA516Ca175BdfD367701184";
+  const rewardTokenAddress = "0xE53c997BD83c81b399Bfbd14FA968708d3650359";
 
   const { runContractFunction: getRTBalance } = useWeb3Contract({
     abi: TokenAbi.abi,
@@ -59,9 +60,9 @@ function StakeDetails() {
     }
 
     if (isWeb3Enabled) updateUiValues();
-  
-}, [account, getEarnedBalance, getRTBalance, getStakedBalance, isWeb3Enabled]);
-return (
+
+  }, [account, getEarnedBalance, getRTBalance, getStakedBalance, isWeb3Enabled]);
+  return (
     <div className='p-3'>
       <div className='font-bold m-2'>RT Balance is: {rtBalance}</div>
       <div className='font-bold m-2'>Earned Balance is: {earnedBalance}</div>

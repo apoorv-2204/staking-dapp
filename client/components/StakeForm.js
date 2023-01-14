@@ -49,7 +49,7 @@ function StakeForm() {
       onError: (error) => console.log(error)
     });
 
-    await tx.wait(0);
+    await tx
     console.log('Stake transaction complete');
   }
 

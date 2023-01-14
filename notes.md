@@ -13,7 +13,7 @@
 13) https://trufflesuite.com/blog/introducing-ganache-7/#6-fast-forward-time
 
 
-###
+### INfura
 1) Infrastructure as a Service,Blockchain Nodes as a service,provid an api to connect to this blockchain 
 2) alchemy and infura
 
@@ -28,3 +28,30 @@ https://faucet.polygon.technology/
 why we are not use infura api in wallet
 https://mumbai.polygonscan.com/
 https://matic-mumbai.chainstacklabs.com
+
+chainid: mumbai testnet
+
+
+### CTC
+You are correct that IERC20 is an interface in Solidity, which means it is not a contract that can be instantiated on its own.<br>
+ However, the IERC20() constructor takes an address of an already deployed ERC-20 contract as its argument. When the IERC20() <br>
+ constructor is called, it creates a new instance of the IERC20 interface, and assigns the address of the deployed ERC-20 contract<br>
+  to this instance of the interface. This allows the contract to interact with the functions and variables of the deployed ERC-20 <br>
+  contract as if it were an instance of the IERC20 interface.<br>
+
+This is a common pattern in solidity to interact with external contracts, when a contract A want to interact with contract B, <br>
+contract A will use an interface that contract B should implement, and use the address of contract B to create a new instance of<br>
+ the interface, this way contract A can interact with contract B by calling the functions defined in the interface.<br>
+ ```solidity 
+        s_stakingToken=IERC20(stakingToken);
+        s_rewardsToken=IERC20(rewardsToken);
+```
+
+ ### UI
+
+ #### Moralis
+
+Provides module of ease devlopment in web3
+- isWeb3Enabled
+- Account Management
+- 
