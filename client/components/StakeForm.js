@@ -6,8 +6,8 @@ import { Form } from 'web3uikit';
 import { ethers } from 'ethers';
 
 function StakeForm() {
-  const stakingAddress = "0x6c096882F49f46ab685885d04c7Cc18dE27051f1";
-  const tesTokenAddress = "0xeA82949B74bf295777FF9e0BC368F7023cF5F3c5";
+  const stakingAddress = "0xFA26a6Cf45689Bf7b4d6Ef72b5898343ed4A4a5f";
+  const tesTokenAddress = "0x52249D502a67e99A14061D7D9174F567aA398FED";
 
   const { runContractFunction } = useWeb3Contract();
 
@@ -49,7 +49,7 @@ function StakeForm() {
       onError: (error) => console.log(error)
     });
 
-    await tx
+    await tx.wait(0)
     console.log('Stake transaction complete');
   }
 

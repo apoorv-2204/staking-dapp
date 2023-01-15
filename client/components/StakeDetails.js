@@ -9,9 +9,12 @@ function StakeDetails() {
   const [stakedBalance, setStakedBalance] = useState('0');
   const [earnedBalance, setEarnedBalance] = useState('0');
 
+  //   To learn more about which versions of Node.js are supported go to https://hardhat.org/nodejs-versions
+  // RewardToken contract deployed to: 0x52249D502a67e99A14061D7D9174F567aA398FED
+  // Staking contract deployed to: 0xFA26a6Cf45689Bf7b4d6Ef72b5898343ed4A4a5f
 
-  const stakingAddress = "0xd00128a1D02b304BFFA516Ca175BdfD367701184";
-  const rewardTokenAddress = "0xE53c997BD83c81b399Bfbd14FA968708d3650359";
+  const stakingAddress = "0xFA26a6Cf45689Bf7b4d6Ef72b5898343ed4A4a5f";
+  const rewardTokenAddress = "0x52249D502a67e99A14061D7D9174F567aA398FED";
 
   const { runContractFunction: getRTBalance } = useWeb3Contract({
     abi: TokenAbi.abi,
