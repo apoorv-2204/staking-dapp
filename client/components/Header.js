@@ -1,7 +1,7 @@
 import React from 'react';
 // web3 button to connect to wallet and display account address
 import { ConnectButton } from 'web3uikit';
-
+// https://www.xenonstack.com/insights/reactjs-project-structure
 function Header() {
   return (
     <nav className="p-5 border-b-2">
