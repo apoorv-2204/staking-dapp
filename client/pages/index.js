@@ -2,6 +2,8 @@ import styles from "../styles/Home.module.css";
 import Header from "../components/Header";
 import StakeDetails from "../components/StakeDetails";
 import StakeForm from "../components/StakeForm";
+import RewardsForm from "../components/Rewards";
+import WithdrawForm from "../components/WithdrawForm";
 
 export default function Home() {
   return (
@@ -10,6 +12,8 @@ export default function Home() {
         <Header />
         <StakeDetails />
         <StakeForm />
+        <RewardsForm />
+        <WithdrawForm />
       </div>
     </main>
   );
