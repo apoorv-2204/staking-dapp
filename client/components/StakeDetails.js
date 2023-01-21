@@ -2,23 +2,24 @@ import React, { useEffect, useState } from 'react';
 import { useMoralis, useWeb3Contract } from 'react-moralis';
 import StakingAbi from '../constants/Staking.json';
 import TokenAbi from '../constants/RewardToken.json';
+import Contracts from './contracts_info';
+
 
 function StakeDetails() {
   const { account, isWeb3Enabled } = useMoralis();
   const [rtBalance, setRtBalance] = useState('0');
   const [stakedBalance, setStakedBalance] = useState('0');
   const [earnedBalance, setEarnedBalance] = useState('0');
+  const [rewardRate, updateRewardRate] = useState(0);
 
   //   To learn more about which versions of Node.js are supported go to https://hardhat.org/nodejs-versions
   // RewardToken contract deployed to: 0x52249D502a67e99A14061D7D9174F567aA398FED
   // Staking contract deployed to: 0xFA26a6Cf45689Bf7b4d6Ef72b5898343ed4A4a5f
 
-  const stakingAddress = "0xFA26a6Cf45689Bf7b4d6Ef72b5898343ed4A4a5f";
-  const rewardTokenAddress = "0x52249D502a67e99A14061D7D9174F567aA398FED";
 
   const { runContractFunction: getRTBalance } = useWeb3Contract({
     abi: TokenAbi.abi,
-    contractAddress: rewardTokenAddress,
+    contractAddress: Contracts.rewardTokenAddress,
     functionName: 'balanceOf',
     params: {
       account
@@ -27,7 +28,7 @@ function StakeDetails() {
 
   const { runContractFunction: getStakedBalance } = useWeb3Contract({
     abi: StakingAbi.abi,
-    contractAddress: stakingAddress,
+    contractAddress: Contracts.stakingAddress,
     functionName: 'getStaked',
     params: {
       account
@@ -36,7 +37,7 @@ function StakeDetails() {
 
   const { runContractFunction: getEarnedBalance } = useWeb3Contract({
     abi: StakingAbi.abi,
-    contractAddress: stakingAddress,
+    contractAddress: Contracts.stakingAddress,
     functionName: 'earned',
     params: {
       account
@@ -70,7 +71,30 @@ function StakeDetails() {
       <div className='font-bold m-2'>RT Balance is: {rtBalance}</div>
       <div className='font-bold m-2'>Earned Balance is: {earnedBalance}</div>
       <div className='font-bold m-2'>Staked Balance is: {stakedBalance}</div>
+      <RewardRateUI />
     </div>
+  );
+}
+
+function RewardRateUI() {
+  // const { data, error, runContractFunction, isFetching, isLoading }
+  var a = useWeb3Contract({
+    abi: StakingAbi.abi,
+    contractAddress: Contracts.stakingAddress,
+    functionName: "REWARD_RATE"
+  });
+  console.log(a);
+  // { data: null, error: null, isFetching: false, isLoading: false, runContractFunction: ƒ }
+  // { data, error, runContractFunction, isFetching, isLoading }
+
+  return (
+    <>
+      {/* <div>
+        {error && <ErrorMessage error={error} />}
+        <button onClick={async () => (await runContractFunction()).toString()} disabled={isFetching}>REward Rat</button>
+        {data && <pre>{JSON.stringify(data, null, 2)}</pre>}
+      </div> */}
+    </>
   );
 }
 
