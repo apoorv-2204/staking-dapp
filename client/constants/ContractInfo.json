@@ -1,4 +1,6 @@
 {
-    "stakingAddress": "0xFA26a6Cf45689Bf7b4d6Ef72b5898343ed4A4a5f",
-    "rewardTokenAddress": "0x52249D502a67e99A14061D7D9174F567aA398FED"
+    "localstakingAddress": "0xe7f1725E7734CE288F8367e1Bb143E90bb3F0512",
+    "localrewardTokenAddress": "0x5FbDB2315678afecb367f032d93F642f64180aa3",
+    "stakingAddress": "0x5f38F36f9Be51F185F3C6fBD36eB10b63F37F028",
+    "rewardTokenAddress": "0xe794C8d59753341A17884A8565286142E88B044D"
 }

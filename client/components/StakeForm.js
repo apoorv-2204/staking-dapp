@@ -2,12 +2,19 @@ import React from 'react';
 import { useWeb3Contract } from 'react-moralis';
 import StakingAbi from '../constants/Staking.json';
 import TokenAbi from '../constants/RewardToken.json';
+import ContractInfo from '../constants/ContractInfo.json';
+
 import { Form } from 'web3uikit';
 import { ethers } from 'ethers';
 
 function StakeForm() {
-  const stakingAddress = "0xFA26a6Cf45689Bf7b4d6Ef72b5898343ed4A4a5f";
-  const tesTokenAddress = "0x52249D502a67e99A14061D7D9174F567aA398FED";
+  // const stakingAddress = "0xFA26a6Cf45689Bf7b4d6Ef72b5898343ed4A4a5f";
+  // const tesTokenAddress = "0x52249D502a67e99A14061D7D9174F567aA398FED";
+
+
+  const stakingAddress = ContractInfo.stakingAddress;
+  const tesTokenAddress = ContractInfo.rewardTokenAddress;
+
 
   const { runContractFunction } = useWeb3Contract();
 
@@ -49,8 +56,8 @@ function StakeForm() {
       onError: (error) => console.log(error)
     });
 
-    console.log(tx)
-    console.log(tx.wait)
+    // console.log(tx)
+    // console.log(tx.wait)
 
     await tx.wait(5)
     console.log('Stake transaction complete', tx);

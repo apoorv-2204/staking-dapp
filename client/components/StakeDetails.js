@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useMoralis, useWeb3Contract } from 'react-moralis';
 import StakingAbi from '../constants/Staking.json';
 import TokenAbi from '../constants/RewardToken.json';
+import ContractInfo from '../constants/ContractInfo.json';
 import Contracts from '../constants/ContractInfo.json';
 
 
@@ -11,10 +12,6 @@ function StakeDetails() {
   const [stakedBalance, setStakedBalance] = useState('0');
   const [earnedBalance, setEarnedBalance] = useState('0');
   const [rewardRate, updateRewardRate] = useState(0);
-
-  //   To learn more about which versions of Node.js are supported go to https://hardhat.org/nodejs-versions
-  // RewardToken contract deployed to: 0x52249D502a67e99A14061D7D9174F567aA398FED
-  // Staking contract deployed to: 0xFA26a6Cf45689Bf7b4d6Ef72b5898343ed4A4a5f
 
 
   const { runContractFunction: getRTBalance } = useWeb3Contract({
